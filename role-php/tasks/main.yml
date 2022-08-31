@@ -1,0 +1,5 @@
+---
+# tasks file for role-php
+- name: Install php
+  ansible.builtin.command: amazon-linux-extras install php{{ php_version }}
+  become: yes
