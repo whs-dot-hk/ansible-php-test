@@ -11,37 +11,39 @@
   ansible.builtin.yum:
     name: https://rpms.remirepo.net/enterprise/remi-release-7.rpm
   become: yes
+- name: Enable php
+  ansible.builtin.shell: yum-config-manager --disable 'remi-php*'; yum-config-manager --enable remi-php{{ php_version_code }}
 - name: Install php
   ansible.builtin.yum:
-    name: php81
+    name: php{{ php_version_code }}
   become: yes
 - name: Install php extensions
   ansible.builtin.yum:
     name:
-    - php81-php-bcmath
-    - php81-php-ctype
-    - php81-php-curl
-    - php81-php-dom
-    - php81-php-fileinfo
-    - php81-php-gd
-    - php81-php-hash
-    - php81-php-iconv
-    - php81-php-intl
-    - php81-php-json
-    - php81-php-libxml
-    - php81-php-libxml
-    - php81-php-mbstring
-    - php81-php-openssl
-    - php81-php-openssl
-    - php81-php-pcre
-    - php81-php-pdo_mysql
-    - php81-php-simplexml
-    - php81-php-soap
-    - php81-php-sockets
-    - php81-php-sodium
-    - php81-php-spl
-    - php81-php-tokenizer
-    - php81-php-xmlwriter
-    - php81-php-xsl
-    - php81-php-zip
+    - php{{ php_version_code }}-php-bcmath
+    - php{{ php_version_code }}-php-ctype
+    - php{{ php_version_code }}-php-curl
+    - php{{ php_version_code }}-php-dom
+    - php{{ php_version_code }}-php-fileinfo
+    - php{{ php_version_code }}-php-gd
+    - php{{ php_version_code }}-php-hash
+    - php{{ php_version_code }}-php-iconv
+    - php{{ php_version_code }}-php-intl
+    - php{{ php_version_code }}-php-json
+    - php{{ php_version_code }}-php-libxml
+    - php{{ php_version_code }}-php-libxml
+    - php{{ php_version_code }}-php-mbstring
+    - php{{ php_version_code }}-php-openssl
+    - php{{ php_version_code }}-php-openssl
+    - php{{ php_version_code }}-php-pcre
+    - php{{ php_version_code }}-php-pdo_mysql
+    - php{{ php_version_code }}-php-simplexml
+    - php{{ php_version_code }}-php-soap
+    - php{{ php_version_code }}-php-sockets
+    - php{{ php_version_code }}-php-sodium
+    - php{{ php_version_code }}-php-spl
+    - php{{ php_version_code }}-php-tokenizer
+    - php{{ php_version_code }}-php-xmlwriter
+    - php{{ php_version_code }}-php-xsl
+    - php{{ php_version_code }}-php-zip
   become: yes
