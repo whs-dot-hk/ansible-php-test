@@ -13,6 +13,7 @@
   become: yes
 - name: Enable php
   ansible.builtin.shell: yum-config-manager --disable 'remi-php*'; yum-config-manager --enable remi-php{{ php_version_code }}
+  become: yes
 - name: Install php
   ansible.builtin.yum:
     name: php{{ php_version_code }}
