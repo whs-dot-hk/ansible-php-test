@@ -1,5 +1,47 @@
 ---
 # tasks file for role-php
+- name: Enable epel
+  ansible.builtin.command: amazon-linux-extras enable epel
+  become: yes
+- name: Install epel-release
+  ansible.builtin.yum:
+    name: epel-release
+  become: yes
+- name: Install remi-release
+  ansible.builtin.yum:
+    name: https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+  become: yes
 - name: Install php
-  ansible.builtin.command: amazon-linux-extras install php{{ php_version }}
+  ansible.builtin.yum:
+    name: php81
+  become: yes
+- name: Install php extensions
+  ansible.builtin.yum:
+    name:
+    - php81-php-bcmath
+    - php81-php-ctype
+    - php81-php-curl
+    - php81-php-dom
+    - php81-php-fileinfo
+    - php81-php-gd
+    - php81-php-hash
+    - php81-php-iconv
+    - php81-php-intl
+    - php81-php-json
+    - php81-php-libxml
+    - php81-php-libxml
+    - php81-php-mbstring
+    - php81-php-openssl
+    - php81-php-openssl
+    - php81-php-pcre
+    - php81-php-pdo_mysql
+    - php81-php-simplexml
+    - php81-php-soap
+    - php81-php-sockets
+    - php81-php-sodium
+    - php81-php-spl
+    - php81-php-tokenizer
+    - php81-php-xmlwriter
+    - php81-php-xsl
+    - php81-php-zip
   become: yes
