@@ -1,0 +1,4 @@
+---
+# vars file for role-composer
+composer_version: 2.4.1
+composer_checksum: ea8cf6308ec76ff9645c3818841a7588096b9dc2767345fbd4bd492dd8a6dca6
