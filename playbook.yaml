@@ -3,4 +3,5 @@
 
   roles:
     - role: role-composer
+    - role: role-elasticsearch
     - role: role-php

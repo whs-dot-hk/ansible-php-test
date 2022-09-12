@@ -1,0 +1,3 @@
+---
+# vars file for role-elasticsearch
+elasticsearch_version: 8.4.1
