@@ -1,0 +1,6 @@
+---
+# tasks file for role-nginx
+- name: Install nginx
+  ansible.builtin.yum:
+    name: nginx
+  become: yes
