@@ -2,7 +2,7 @@
 # tasks file for role-composer
 - name: Install composer
   ansible.builtin.get_url:
-    checksum: "{{ composer_checksum }}"
+    checksum: sha256:{{ composer_checksum }}
     dest: /usr/local/bin/composer
     mode: 0755
     url: https://getcomposer.org/download/{{ composer_version }}/composer.phar
