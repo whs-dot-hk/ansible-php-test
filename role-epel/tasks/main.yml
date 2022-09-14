@@ -1,0 +1,5 @@
+---
+# tasks file for role-epel
+- name: Install epel
+  ansible.builtin.command: amazon-linux-extras install -y epel
+  become: yes
