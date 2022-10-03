@@ -2,5 +2,5 @@
 # tasks file for role-development-tools
 - name: Install development tools
   ansible.builtin.yum:
-    name: @Development tools
+    name: "@Development tools"
   become: yes
