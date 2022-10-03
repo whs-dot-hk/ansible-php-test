@@ -1,0 +1,11 @@
+---
+# tasks file for role-mariadb
+- name: Setup mariadb repo
+  ansible.builtin.shell: curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --os-type=rhel --os-version=7 --mariadb-server-version=mariadb-{{ mariadb_version }}
+  become: yes
+- name: Install mariadb
+  ansible.builtin.yum:
+    name:
+      - MariaDB-backup
+      - MariaDB-client
+  become: yes

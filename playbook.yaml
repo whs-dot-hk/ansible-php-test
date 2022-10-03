@@ -3,6 +3,8 @@
 
   roles:
     - role: role-composer
+    - role: role-development-tools
     - role: role-elasticsearch
+    - role: role-mariadb
     - role: role-nginx
     - role: role-php
