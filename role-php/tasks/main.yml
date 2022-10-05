@@ -41,3 +41,9 @@
     - php{{ php_version_code }}-php-xsl
     - php{{ php_version_code }}-php-zip
   become: yes
+- name: Link php
+  ansible.builtin.file:
+    dest: /usr/bin/php
+    src: /usr/bin/php{{ php_version_code }}
+    state: link
+  become: yes
