@@ -4,3 +4,8 @@
   ansible.builtin.yum:
     name: nginx
   become: yes
+- name: Enable nginx
+  systemd:
+    name: nginx
+    enabled: yes
+  become: yes

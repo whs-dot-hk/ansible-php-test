@@ -1,0 +1,11 @@
+---
+# tasks file for role-awslogs
+- name: Install awslogs
+  ansible.builtin.yum:
+    name: awslogs
+  become: yes
+- name: Enable awslogsd
+  systemd:
+    name: awslogsd
+    enabled: yes
+  become: yes

@@ -4,3 +4,8 @@
   ansible.builtin.yum:
     name: https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ elasticsearch_version }}-x86_64.rpm
   become: yes
+- name: Enable elasticsearch
+  systemd:
+    name: elasticsearch
+    enabled: yes
+  become: yes
