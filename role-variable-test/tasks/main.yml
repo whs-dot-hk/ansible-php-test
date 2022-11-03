@@ -1,0 +1,7 @@
+---
+# tasks file for role-variable-test
+- name: Test
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_env.HOME }}/test.txt"
+    line: "{{ environmentt }}"
+    create: yes

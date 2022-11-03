@@ -2,10 +2,11 @@
   hosts: default
 
   roles:
-    - role: role-awslogs
-    - role: role-composer
-    - role: role-development-tools
-    - role: role-elasticsearch
-    - role: role-mariadb
-    - role: role-nginx
-    - role: role-php
+    - role: role-variable-test
+    #- role: role-awslogs
+    #- role: role-composer
+    #- role: role-development-tools
+    #- role: role-elasticsearch
+    #- role: role-mariadb
+    #- role: role-nginx
+    #- role: role-php
